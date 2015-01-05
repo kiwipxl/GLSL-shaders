@@ -1,7 +1,7 @@
 #version 140
 
 /**
--------------- glow vertex shader -------------
+-------------- repeat vertex shader -------------
 
     author: Richman Stewart
 

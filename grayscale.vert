@@ -1,7 +1,7 @@
 #version 140
 
 /**
--------------- glow vertex shader -------------
+-------------- grayscale vertex shader -------------
 
     author: Richman Stewart
 

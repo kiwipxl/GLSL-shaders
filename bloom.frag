@@ -15,8 +15,8 @@
 
 **/
 
-in vec4 v_color;
-in vec2 v_texCoords;
+in vec4 v_colour;
+in vec2 v_tex_coords;
 out vec4 pixel;
 ivec2 size;
 
@@ -29,12 +29,12 @@ void main() {
 
     float step_x = bloom_size.x;
     float step_y = bloom_size.y;
-    float uv_x = v_texCoords.x * size.x;
-    float uv_y = v_texCoords.y * size.y;
+    float uv_x = v_tex_coords.x * size.x;
+    float uv_y = v_tex_coords.y * size.y;
 
     vec4 sum = vec4(0.0);
     for (int n = 0; n < 9; ++n) {
-        uv_y = (v_texCoords.y * size.y) + (step_y * float(n - 4));
+        uv_y = (v_tex_coords.y * size.y) + (step_y * float(n - 4));
         vec4 h_sum = vec4(0.0);
         h_sum += texelFetch(u_texture, ivec2(uv_x - (4.0 * step_x), uv_y), 0);
         h_sum += texelFetch(u_texture, ivec2(uv_x - (3.0 * step_x), uv_y), 0);
@@ -48,5 +48,5 @@ void main() {
         sum += h_sum / 9.0;
     }
 
-    pixel = texture(u_texture, v_texCoords) + ((sum / 9.0) * bloom_intensity);
+    pixel = texture(u_texture, v_tex_coords) + ((sum / 9.0) * bloom_intensity);
 }

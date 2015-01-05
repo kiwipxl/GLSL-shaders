@@ -1,7 +1,7 @@
 #version 140
 
 /**
--------------- glow vertex shader -------------
+-------------- blur vertex shader -------------
 
     author: Richman Stewart
 
