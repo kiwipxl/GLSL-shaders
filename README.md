@@ -1,8 +1,8 @@
 GLSL-shaders
 ============
 
-A bundle of various GLSL shaders for openGL.
+A bundle of simple GLSL shaders for openGL.
 
-Each shader here is free to use, have fun!
+These were written while I was learning GLSL so maybe of them don't use the best techniques to achieve the desired effect.
 
-No credit is required, but it is appreciated.
+For learning GLSL, check out [this wonderful repo](https://github.com/radixzz/awesome-glsl) instead for excellent learning resources.
